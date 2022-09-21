@@ -14,16 +14,14 @@ export const BootstrapNavbar = () => {
 
   return (
     <Navbar expand='sm' bg='dark'>
-      <Navbar.Toggle aria-controls='myNavbar' />
+      <Navbar.Toggle aria-controls='myNavbar' className='none'/>
       <Navbar.Collapse className='row'>
           <Nav id='myNavbar' className='around'>
-              
-              <NavLink as={Link} className='NavLink' to='/countries'>Countries</NavLink>
-              <NavLink as={Link} className='NavLink' to='/cytaty'>Цитаты</NavLink>
-              <NavLink as={Link} className='NavLink' to='/nasa'>Nasa</NavLink>
+              <NavLink as={Link} className='NavLink' to='/'>Поиск</NavLink>         
+              <NavLink as={Link} className='NavLink' to='/fav'>Избранные</NavLink>         
           </Nav>
           <div className='ava2'>
-            {user ? <img className='ava' src={user.photoURL} /> : null }
+            {user ? <img className='ava' src={user.photoURL} alt='' /> : null }
           {user ? <SignOut /> : <SignIn />}
           </div>
       </Navbar.Collapse>
